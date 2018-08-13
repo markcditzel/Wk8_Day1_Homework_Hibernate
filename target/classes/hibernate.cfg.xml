@@ -9,7 +9,7 @@
         <!--install the driver for communication between Java and postgres-->
         <property name="connection.driver_class">org.postgresql.Driver</property>
         <!--show the location of the db and its name-->
-        <property name="connection.url">jdbc:postgresql://localhost/carsdb</property>
+        <property name="connection.url">jdbc:postgresql://localhost/piratedb</property>
         <!--establish the translation method between java and postgres-->
         <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQL9Dialect</property>
         <!-- establish the 'width' of channels available to user lower = less; prevents clashes-->
