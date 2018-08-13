@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <property name="hbm2ddl.auto">create</property>
+        <!--install the driver for communication between Java and postgres-->
+        <property name="connection.driver_class">org.postgresql.Driver</property>
+        <!--show the location of the db and its name-->
+        <property name="connection.url">jdbc:postgresql://localhost/carsdb</property>
+        <!--establish the translation method between java and postgres-->
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQL9Dialect</property>
+        <!-- establish the 'width' of channels available to user lower = less; prevents clashes-->
+        <property name="connection.pool_size">1</property>
+        <!-- ensure that Sql commands are visible-->
+        <property name="show_sql">true</property>
+        <mapping class = "models.Car"/>
+    </session-factory>
+
+
+</hibernate-configuration>
